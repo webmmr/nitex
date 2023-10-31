@@ -1,11 +1,6 @@
-import { BsWindowFullscreen, BsPalette, BsGrid3X3 } from "react-icons/bs";
-import { HiOutlineRocketLaunch } from "react-icons/hi2";
-import { FaReact } from "react-icons/fa";
-import { FiLayers } from "react-icons/fi";
-
 export default function Testimonials() {
   return (
-    <section className="pt-32 pb-24 text-stone-50">
+    <section className="pt-32 pb-24 text-stone-50" id="testimonial">
       <div className="container mx-auto">
         <h2 className="text-center text-3xl text-stone-900 font-bold mb-4">
           Hear From Our Clients

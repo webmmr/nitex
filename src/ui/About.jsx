@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { AiFillCheckCircle } from "react-icons/ai";
+import Button from "./Button";
 
 export default function About() {
   return (
-    <section className="py-32">
+    <section className="py-32" id="about">
       <div className="container mx-auto">
         <div id="online" className="flex items-center mb-16">
           <div className="flex-1 relative">
@@ -34,12 +35,7 @@ export default function About() {
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
               sanctus est Lorem.
             </p>
-            <Link
-              to="/"
-              className=" font-bold border-2 border-stone-700 py-4 px-8 inline-block rounded-full text-stone-700 hover:bg-stone-900 hover:border-stone-900 hover:text-stone-50"
-            >
-              Doscover More
-            </Link>
+            <Button type="primary">Discover More</Button>
           </div>
         </div>
         <div id="features" className="flex items-center">
@@ -72,12 +68,7 @@ export default function About() {
                 <p className="text-lg">24/7 Support</p>
               </li>
             </ul>
-            <Link
-              to="/"
-              className=" font-bold border-2 border-stone-700 py-4 px-8 inline-block rounded-full text-stone-700 hover:bg-stone-900 hover:border-stone-900 hover:text-stone-50"
-            >
-              Doscover More
-            </Link>
+            <Button type="primary">Discover More</Button>
           </div>
           <div className="flex-1 relative">
             <img

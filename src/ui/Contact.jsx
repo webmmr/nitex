@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function Contact() {
   return (
-    <section className="py-32 ">
+    <section className="py-32 " id="contact">
       <div className="container mx-auto">
         <div className="p-16 bg-contact bg-cover bg-no-repeat bg-center rounded-lg">
           <h2 className="text-center text-3xl text-stone-50 font-bold mb-4">
@@ -51,7 +51,11 @@ export default function Contact() {
               required
             ></textarea>
 
-            <Button>Submit</Button>
+            <input
+              type="submit"
+              value="Send Message"
+              className="font-bold border-2 py-4 px-8 rounded-full border-stone-50 text-stone-50 mx-auto hover:bg-brand hover:border-brand hover:cursor-pointer"
+            />
           </form>
         </div>
       </div>

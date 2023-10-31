@@ -5,7 +5,7 @@ import { FiLayers } from "react-icons/fi";
 
 export default function Why() {
   return (
-    <section className="pt-32 pb-24 bg-brand text-stone-50">
+    <section className="pt-32 pb-24 bg-brand text-stone-50" id="why">
       <div className="container mx-auto">
         <h2 className="text-center text-3xl font-bold mb-4">Why Choose Us</h2>
         <p className="text-lg text-stone-200 text-center max-w-xl mx-auto mb-16">

@@ -1,5 +1,5 @@
 import { CiFacebook, CiTwitter, CiInstagram, CiLinkedin } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 export default function Footer() {
   return (
@@ -43,19 +43,19 @@ export default function Footer() {
             </h2>
             <ul className="flex flex-col gap-4 text-stone-50 ">
               <li>
-                <Link to="/">About</Link>
+                <Link to="/#about">About</Link>
               </li>
               <li>
-                <Link to="/">Features</Link>
+                <Link to="/#features">Features</Link>
               </li>
               <li>
-                <Link to="/">Why Us</Link>
+                <Link to="/#why">Why Us</Link>
               </li>
               <li>
-                <Link to="/">Price</Link>
+                <Link to="/#price">Price</Link>
               </li>
               <li>
-                <Link to="/">Testimonials</Link>
+                <Link to="/#testimonial">Testimonials</Link>
               </li>
             </ul>
           </div>

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import Button from "./Button";
 
 export default function Pricing() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <section className="py-32">
+    <section className="py-32" id="price">
       <div className="container mx-auto">
         <h2 className="text-center text-3xl font-bold mb-4">
           Our Pricing Plan
@@ -58,7 +58,7 @@ export default function Pricing() {
 
         <div className="grid grid-cols-4 gap-8">
           <div className="py-8 px-6 rounded-lg shadow-sm border">
-            <h3 className="text-2xl mb-4">Intro</h3>
+            <h3 className="text-2xl mb-4 text-brand">Intro</h3>
             <h2 className="mb-4 text-3xl font-bold">
               {!toggle ? "$19" : "$219"}
               <span className="font-normal">
@@ -101,15 +101,10 @@ export default function Pricing() {
                 <p className="">Free Future Updates</p>
               </li>
             </ul>
-            <Link
-              to="/"
-              className=" font-bold border-2 border-stone-700 py-4 px-8 inline-block rounded-full text-stone-700 hover:bg-stone-900 hover:border-stone-900 hover:text-stone-50"
-            >
-              Choose Plan
-            </Link>
+            <Button type="primary">Choose Plan</Button>
           </div>
           <div className="py-8 px-6 rounded-lg shadow-sm border">
-            <h3 className="text-2xl mb-4">Basic</h3>
+            <h3 className="text-2xl mb-4 text-brand">Basic</h3>
             <h2 className="mb-4 text-3xl font-bold">
               {!toggle ? "$39" : "$459"}
               <span className="font-normal">
@@ -152,15 +147,10 @@ export default function Pricing() {
                 <p className="">Free Future Updates</p>
               </li>
             </ul>
-            <Link
-              to="/"
-              className=" font-bold border-2 border-stone-700 py-4 px-8 inline-block rounded-full text-stone-700 hover:bg-stone-900 hover:border-stone-900 hover:text-stone-50"
-            >
-              Choose Plan
-            </Link>
+            <Button type="primary">Choose Plan</Button>
           </div>
           <div className="py-8 px-6 rounded-lg shadow-sm border">
-            <h3 className="text-2xl mb-4">Popular</h3>
+            <h3 className="text-2xl mb-4 text-brand">Popular</h3>
             <h2 className="mb-4 text-3xl font-bold">
               {!toggle ? "$49" : "$579"}
               <span className="font-normal">
@@ -203,15 +193,10 @@ export default function Pricing() {
                 <p className="">Free Future Updates</p>
               </li>
             </ul>
-            <Link
-              to="/"
-              className=" font-bold border-2 border-stone-700 py-4 px-8 inline-block rounded-full text-stone-700 hover:bg-stone-900 hover:border-stone-900 hover:text-stone-50"
-            >
-              Choose Plan
-            </Link>
+            <Button type="primary">Choose Plan</Button>
           </div>
           <div className="py-8 px-6 rounded-lg shadow-sm border">
-            <h3 className="text-2xl mb-4">Enterprise</h3>
+            <h3 className="text-2xl mb-4 text-brand">Enterprise</h3>
             <h2 className="mb-4 text-3xl font-bold">
               {!toggle ? "$99" : "$1179"}
               <span className="font-normal">
@@ -254,12 +239,7 @@ export default function Pricing() {
                 <p className="">Free Future Updates</p>
               </li>
             </ul>
-            <Link
-              to="/"
-              className=" font-bold border-2 border-stone-700 py-4 px-8 inline-block rounded-full text-stone-700 hover:bg-stone-900 hover:border-stone-900 hover:text-stone-50"
-            >
-              Choose Plan
-            </Link>
+            <Button type="primary">Choose Plan</Button>
           </div>
         </div>
       </div>

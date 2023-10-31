@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 export default function Banner() {
   return (
@@ -13,12 +14,7 @@ export default function Banner() {
             impedit ipsum nesciunt illo nisi expedita error exercitationem
             maxime voluptate a.
           </p>
-          <Link
-            to="/#features"
-            className=" font-bold border-2 border-stone-50 py-4 px-8 inline-block rounded-full text-stone-50 hover:bg-stone-100 hover:border-stone-100 hover:text-stone-800"
-          >
-            Get Started
-          </Link>
+          <Button type="banner">Get Started</Button>
         </div>
         <img
           src="/assets/hero-img.png"

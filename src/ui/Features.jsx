@@ -3,7 +3,7 @@ import { AiOutlineLayout, AiOutlineCoffee } from "react-icons/ai";
 
 export default function Features() {
   return (
-    <section className="py-32">
+    <section className="py-32" id="features">
       <div className="container mx-auto flex justify-between items-center gap-8">
         <div className=" text-center p-8 bg-white rounded-lg shadow-sm flex-1 border">
           <SiTailwindcss className="m-auto text-5xl mb-5 text-brand" />

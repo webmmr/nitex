@@ -48,7 +48,7 @@ export default function Faq() {
   };
 
   return (
-    <section className="pt-32 pb-24 bg-brand text-stone-50">
+    <section className="pt-32 pb-24 bg-brand text-stone-50" id="faq">
       <div className="container mx-auto">
         <h2 className="text-center text-3xl font-bold mb-4">
           Frequesntly Asked Questions
@@ -71,7 +71,7 @@ export default function Faq() {
                 on the button below and someone from our team will be with you
                 momentarily.
               </p>
-              <Button>Contact Support</Button>
+              <Button type="banner">Contact Support</Button>
             </div>
           </div>
           <div className="  col-span-2 ">
