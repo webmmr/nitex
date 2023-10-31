@@ -1,3 +1,34 @@
+const testimonials = [
+  {
+    image: "/assets/ayro.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-1.png",
+    person: "Kylo Ren",
+    designation: "Software Engineer @ Aylo",
+  },
+  {
+    image: "/assets/lineicon.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-2.png",
+    person: "Kevin Bacon",
+    designation: "Software Engineer @ Lineicon",
+  },
+  {
+    image: "/assets/tailgrid.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-3.png",
+    person: "Martina hingis",
+    designation: "Software Engineer @ TailGrids",
+  },
+  {
+    image: "/assets/uidecks.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-4.png",
+    person: "Kugisaki Nobara",
+    designation: "Software Engineer @ UiDecks",
+  },
+];
+
 export default function Testimonials() {
   return (
     <section className="pt-32 pb-24 text-stone-50" id="testimonial">
@@ -34,7 +65,7 @@ export default function Testimonials() {
                 />
                 <div>
                   <h5 className="font-bold text-lg text-stone-900">Kylo Ren</h5>
-                  <p className="text-stone-600">Software Engineer @ Aylo</p>
+                  <p className="text-stone-600"></p>
                 </div>
               </div>
             </div>

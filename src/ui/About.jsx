@@ -1,28 +1,57 @@
-import { Link } from "react-router-dom";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Button from "./Button";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+const animationOpacityLeft = {
+  visible: { opacity: 1, translateX: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, translateX: -100 },
+};
+
+const animationOpacityRight = {
+  visible: { opacity: 1, translateX: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, translateX: 100 },
+};
+
 export default function About() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <section className="py-32" id="about">
       <div className="container mx-auto">
         <div id="online" className="flex items-center mb-16">
           <div className="flex-1 relative">
-            <img
-              src="/assets/about-left-shape.svg"
-              alt="About left shape"
-              className="absolute top-0 left-0 -z-20"
-            />
-            <img
-              src="/assets/about-1.png"
-              alt="About Image"
-              className=" py-32 m-auto"
-            />
-            <img
-              src="/assets/left-dots.svg"
-              alt="Left Dots"
-              className="absolute bottom-10 right-32 -z-10"
-            />
+            <motion.div
+              ref={ref}
+              animate={controls}
+              initial="hidden"
+              variants={animationOpacityLeft}
+            >
+              <img
+                src="/assets/about-left-shape.svg"
+                alt="About left shape"
+                className="absolute top-0 left-0 -z-20"
+              />
+              <img
+                src="/assets/about-1.png"
+                alt="About Image"
+                className=" py-32 m-auto"
+              />
+              <img
+                src="/assets/left-dots.svg"
+                alt="Left Dots"
+                className="absolute bottom-10 right-32 -z-10"
+              />
+            </motion.div>
           </div>
           <div className="flex-1">
             <h2 className="text-3xl font-bold mb-4 text-stone-900">
@@ -71,21 +100,28 @@ export default function About() {
             <Button type="primary">Discover More</Button>
           </div>
           <div className="flex-1 relative">
-            <img
-              src="/assets/about-right-shape.svg"
-              alt="About right shape"
-              className="absolute top-0 right-0  -z-20"
-            />
-            <img
-              src="/assets/about-2.png"
-              alt="About Image"
-              className=" py-32 m-auto"
-            />
-            <img
-              src="/assets/right-dots.svg"
-              alt="Right Dots"
-              className="absolute bottom-10 left-32 -z-10"
-            />
+            <motion.div
+              ref={ref}
+              animate={controls}
+              initial="hidden"
+              variants={animationOpacityRight}
+            >
+              <img
+                src="/assets/about-right-shape.svg"
+                alt="About right shape"
+                className="absolute top-0 right-0  -z-20"
+              />
+              <img
+                src="/assets/about-2.png"
+                alt="About Image"
+                className=" py-32 m-auto"
+              />
+              <img
+                src="/assets/right-dots.svg"
+                alt="Right Dots"
+                className="absolute bottom-10 left-32 -z-10"
+              />
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,14 +1,47 @@
-import About from "./About";
-import Banner from "./Banner";
-import Contact from "./Contact";
-import Faq from "./FAQ";
-import Features from "./Features";
-import Footer from "./Footer";
+import { Suspense, lazy } from "react";
+import Gallery from "./Gallery";
 
-import Navbar from "./Navbar";
-import Pricing from "./Pricing";
-import Testimonials from "./Testimonials";
-import Why from "./Why";
+const Banner = lazy(() => import("./Banner"));
+const Navbar = lazy(() => import("./Navbar"));
+const Features = lazy(() => import("./Features"));
+const About = lazy(() => import("./About"));
+const Why = lazy(() => import("./Why"));
+const Pricing = lazy(() => import("./Pricing"));
+const Testimonials = lazy(() => import("./Testimonials"));
+const Faq = lazy(() => import("./FAQ"));
+const Contact = lazy(() => import("./Contact"));
+const Footer = lazy(() => import("./Footer"));
+
+const testimonials = [
+  {
+    image: "/assets/ayro.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-1.png",
+    person: "Kylo Ren",
+    designation: "Software Engineer @ Aylo",
+  },
+  {
+    image: "/assets/lineicon.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-2.png",
+    person: "Kevin Bacon",
+    designation: "Software Engineer @ Lineicon",
+  },
+  {
+    image: "/assets/tailgrid.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-3.png",
+    person: "Martina hingis",
+    designation: "Software Engineer @ TailGrids",
+  },
+  {
+    image: "/assets/uidecks.svg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullamlaoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.",
+    personImage: "/assets/image-4.png",
+    person: "Kugisaki Nobara",
+    designation: "Software Engineer @ UiDecks",
+  },
+];
 
 export default function AppLayout() {
   return (
@@ -16,19 +49,39 @@ export default function AppLayout() {
       {/* <header>
         <Header />
       </header> */}
-      <Navbar />
-      <Banner />
+      <Suspense>
+        <Navbar />
+      </Suspense>
+      <Suspense>
+        <Banner />
+      </Suspense>
       <main>
-        <Features />
-        <About />
-        <Why />
-        <Pricing />
-        <Testimonials />
-        <Faq />
-        <Contact />
+        <Suspense>
+          <Features />
+        </Suspense>
+        <Suspense>
+          <About />
+        </Suspense>
+        <Suspense>
+          <Why />
+        </Suspense>
+        <Suspense>
+          <Pricing />
+        </Suspense>
+        <Suspense>
+          <Gallery testimonials={testimonials} />
+        </Suspense>
+        <Suspense>{/* <Testimonials /> */}</Suspense>
+        <Suspense>
+          <Faq />
+        </Suspense>
+        <Suspense>
+          <Contact />
+        </Suspense>
       </main>
-
-      <Footer />
+      <Suspense>
+        <Footer />
+      </Suspense>
     </>
   );
 }
