@@ -1,4 +1,6 @@
 import About from "./About";
+import Contact from "./Contact";
+import Faq from "./FAQ";
 import Features from "./Features";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -18,6 +20,8 @@ export default function AppLayout() {
         <Why />
         <Pricing />
         <Testimonials />
+        <Faq />
+        <Contact />
       </main>
       <footer>
         <Footer />
