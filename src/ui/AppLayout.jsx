@@ -3,6 +3,7 @@ import Features from "./Features";
 import Footer from "./Footer";
 import Header from "./Header";
 import Pricing from "./Pricing";
+import Testimonials from "./Testimonials";
 import Why from "./Why";
 
 export default function AppLayout() {
@@ -16,6 +17,7 @@ export default function AppLayout() {
         <About />
         <Why />
         <Pricing />
+        <Testimonials />
       </main>
       <footer>
         <Footer />
