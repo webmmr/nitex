@@ -4,24 +4,23 @@ import Button from "./Button";
 
 export default function Contact() {
   return (
-    <section className="relative">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.1531674451676!2d90.41124127579461!3d23.77755948773235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b80a2d1a3ead%3A0x86fa43623a76a327!2sNITEX!5e0!3m2!1sen!2sbd!4v1698735355069!5m2!1sen!2sbd"
-        width="100%"
-        height="800px"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        className="absolute top-0 left-0"
-      ></iframe>
+    <section className="py-32 ">
+      <div className="container mx-auto">
+        <div className="p-16 bg-contact bg-cover bg-no-repeat bg-center rounded-lg">
+          <h2 className="text-center text-3xl text-stone-50 font-bold mb-4">
+            Get in Touch
+          </h2>
+          <p className="text-lg text-stone-200 text-center max-w-xl mx-auto mb-16">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nostrum
+            facilis, in porro esse eveniet.
+          </p>
 
-      <div className="absolute z-10  right-0">
-        <div className=" p-8 bg-brandDark opacity-90 rounded-lg shadow-sm border">
-          <form action="#" className="flex flex-col gap-8">
+          <form action="#" className="flex flex-col gap-8 w-3/5 mx-auto ">
             <input
               type="text"
               id="name"
               name="name"
-              className="p-4 rounded-lg"
+              className="p-4 rounded-lg border"
               placeholder="Your Name"
               required
             />
@@ -30,7 +29,7 @@ export default function Contact() {
               type="tel"
               id="phone"
               name="phone"
-              className="p-4 rounded-lg"
+              className="p-4 rounded-lg border"
               placeholder="Your Phone Number"
             />
 
@@ -38,7 +37,7 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
-              className="p-4 rounded-lg"
+              className="p-4 rounded-lg border"
               placeholder="Your Email Address"
               required
             />
@@ -47,7 +46,7 @@ export default function Contact() {
               id="message"
               name="message"
               rows="4"
-              className="p-4 rounded-lg"
+              className="p-4 rounded-lg border"
               placeholder="Your Message"
               required
             ></textarea>

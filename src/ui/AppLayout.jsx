@@ -23,9 +23,8 @@ export default function AppLayout() {
         <Faq />
         <Contact />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+
+      <Footer />
     </>
   );
 }

@@ -6,6 +6,7 @@ export default {
       backgroundImage: (theme) => ({
         banner: "url('/assets/hero-bg.svg')",
         footer: "url('/assets/footer-bg.svg')",
+        contact: "url('/assets/subscribe-bg.svg')",
       }),
       colors: {
         brand: "#2944D9",
