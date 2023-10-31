@@ -28,7 +28,10 @@ export default function About() {
   return (
     <section className="py-32" id="about">
       <div className="container mx-auto">
-        <div id="online" className="flex items-center mb-16">
+        <div
+          id="online"
+          className="flex md:flex-row flex-col items-center mb-16"
+        >
           <div className="flex-1 relative">
             <motion.div
               ref={ref}
@@ -49,11 +52,11 @@ export default function About() {
               <img
                 src="/assets/left-dots.svg"
                 alt="Left Dots"
-                className="absolute bottom-10 right-32 -z-10"
+                className="absolute bottom-10 md:right-32 right-6 -z-10"
               />
             </motion.div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 md:mt-0 mt-8">
             <h2 className="text-3xl font-bold mb-4 text-stone-900">
               Perfect Solution Thriving Online Business
             </h2>
@@ -67,8 +70,8 @@ export default function About() {
             <Button type="primary">Discover More</Button>
           </div>
         </div>
-        <div id="features" className="flex items-center">
-          <div className="flex-1">
+        <div id="features" className="flex items-center md:flex-row flex-col ">
+          <div className="flex-1 md:mt-0 mt-8 md:order-first order-last">
             <h2 className="text-3xl font-bold mb-4 text-stone-900">
               Easy to Use with Tons of Awesome Features
             </h2>
@@ -119,7 +122,7 @@ export default function About() {
               <img
                 src="/assets/right-dots.svg"
                 alt="Right Dots"
-                className="absolute bottom-10 left-32 -z-10"
+                className="absolute bottom-10 md:left-32 left-6 -z-10"
               />
             </motion.div>
           </div>

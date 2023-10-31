@@ -31,7 +31,7 @@ export default function Features() {
 
   return (
     <section className="py-32" id="features">
-      <div className="container mx-auto flex justify-between items-center gap-8">
+      <div className="container mx-auto flex md:flex-row flex-col justify-between items-center gap-8">
         <motion.div
           ref={ref}
           animate={controls}

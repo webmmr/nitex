@@ -15,7 +15,10 @@ export default function Contact() {
             facilis, in porro esse eveniet.
           </p>
 
-          <form action="#" className="flex flex-col gap-8 w-3/5 mx-auto ">
+          <form
+            action="#"
+            className="flex flex-col gap-8 md:w-3/5 w-full mx-auto "
+          >
             <input
               type="text"
               id="name"

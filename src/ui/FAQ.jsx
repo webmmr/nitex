@@ -58,7 +58,7 @@ export default function Faq() {
           facilis, in porro esse eveniet.
         </p>
 
-        <div className="grid grid-cols-3 gap-8 auto-cols-max">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-8 auto-cols-max">
           <div>
             <div className=" p-8 shadow-sm rounded-lg bg-brandDark col-span-1 text-center h-auto">
               <HiOutlineChatBubbleLeftRight className=" text-7xl mb-5 mx-auto" />

@@ -40,7 +40,7 @@ export default function Pricing() {
                 <div className="block bg-brand w-12 h-6 rounded-full"></div>
 
                 <div
-                  className={`dot absolute top-1  bg-white w-4 h-4 rounded-full transition ${
+                  className={` absolute top-1  bg-stone-50 w-4 h-4 rounded-full transition ${
                     !toggle ? "translate-x-1 " : "translate-x-7"
                   }`}
                 ></div>
@@ -56,7 +56,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8">
           <div className="py-8 px-6 rounded-lg shadow-sm border">
             <h3 className="text-2xl mb-4 text-brand">Intro</h3>
             <h2 className="mb-4 text-3xl font-bold">

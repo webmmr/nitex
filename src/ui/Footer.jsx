@@ -3,9 +3,9 @@ import { HashLink as Link } from "react-router-hash-link";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer bg-contain bg-left bg-no-repeat pt-72 pb-12 ">
+    <footer className="bg-footer md:bg-contain bg-cover md:bg-left bg-center bg-no-repeat pt-72 pb-12 ">
       <div className="container mx-auto">
-        <div className="grid grid-cols-4 gap-16 mx-16">
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-16 mx-16">
           <div>
             <h2 className="text-3xl font-bold text-stone-50 mb-4">Nitex</h2>
             <p className="leading-6 mb-8 text-stone-200">
